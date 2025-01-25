@@ -1,0 +1,6 @@
+#! /bin/tcsh
+
+sox --volume 0.93 $1 --bits 8 -r 37616 --encoding signed-integer --endian little $1:r.raw
+
+python3 convert.py $1:r.raw $1:r.h $1:t:r 16384
+rm $1:r.raw

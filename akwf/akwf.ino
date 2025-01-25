@@ -224,11 +224,26 @@ uint16_t lengths4 = DATA_LENGTH;
 #undef DATA_LENGTH
 
 
+/// CONFIGURATION
+///
+/// IN 1            Pitch CV
+/// IN 2            Position in Wavetable CV
+/// IN 3            [Unused]
+/// AUDIO IN (A)    Pitch Tuning
+/// AUDIO OUT       Out
+/// DIGITAL OUT (D) [Unused]
+///
+/// POT 1           Pitch Scaling       [Set the switch to In1]
+///
+/// POT 2           Position in Wavetable       [Set the switch to In1.  You're probably using CV, so set Pot to full right]
+///
+/// POT 3           Filter Cutoff
+
 #define CV_POT_IN1    A2    // Note in, Pitch Scaling           // Position in Wavetable 
-#define CV_POT_IN2    A1    // Position in Wavetable
-#define CV_POT3       A0    // Filter Cutoff
+#define CV_POT_IN2    A0    // Position in Wavetable
+#define CV_POT3       A1    // Filter Cutoff
 #define CV_IN3        A3    // [Unused]
-#define CV_AUDIO_IN   A4    // Filter Tuning
+#define CV_AUDIO_IN   A3    // Filter Tuning
 #define CV_AUDIO_OUT  9     // Out
 #define CV_GATE_OUT   8     // [Unused]
 #define RANDOM_PIN    A5

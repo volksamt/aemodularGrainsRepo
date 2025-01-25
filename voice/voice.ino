@@ -505,15 +505,29 @@ MetaOscil<TRI_MAX_103_AT_16384_512_NUM_CELLS, AUDIO_RATE, 35> meta {&tri103, &tr
 #endif
 
 
-#define CV_POT_IN1    A2    // Note In, Pitch Scaling                   // Filter Cutoff
-#define CV_POT_IN2    A1    // Filter Cutoff
-#define CV_POT3       A0    // Resonance
-#define CV_IN3        A3    // Amplitude CV
-#define CV_AUDIO_IN   A4    // Pitch Tune                                               // Resonance CV
+#define CV_POT_IN1    A3    // Note In, Pitch Scaling                   // Filter Cutoff
+#define CV_POT_IN2    A0    // Filter Cutoff
+#define CV_POT3       A1    // Resonance
+#define CV_IN3        A0    // Amplitude CV
+#define CV_AUDIO_IN   A2    // Pitch Tune                                               // Resonance CV
 #define CV_AUDIO_OUT  9     // Out
 #define CV_GATE_OUT   8     // [Unused]
 #define RANDOM_PIN    A5
 
+/// CONFIGURATION
+///
+/// IN 1            Pitch CV
+/// IN 2            Filter Cutoff CV
+/// IN 3            Amplitude CV
+/// AUDIO IN (A)    Pitch Tune
+/// AUDIO OUT       Out
+/// DIGITAL OUT (D) [Unused]
+///
+/// POT 1           Pitch Scaling       [Set the switch to In1]
+///
+/// POT 2           Fiter Cutoff
+///
+/// POT 3           Resonance 
 
 ResonantFilter<RESONANT_FILTER_TYPE,uint16_t> filter;
 

@@ -596,11 +596,11 @@ float semitoneFrequencyRatios[] =
 
 
 
-#define CV_POT_IN1    A2    // Note In, Pitch Scaling                           // Mix
+#define CV_POT_IN1    A3    // Note In, Pitch Scaling                           // Mix
 #define CV_POT_IN2    A1    // Mix                                                                      // Pitch Tune
 #define CV_POT3       A0    // Chord
-#define CV_IN3        A3    // [Unused]
-#define CV_AUDIO_IN   A4    // Pitch Tune                                                       // [Unused]
+#define CV_IN3        A4    // [Unused]
+#define CV_AUDIO_IN   A2    // Pitch Tune                                                       // [Unused]
 #define CV_AUDIO_OUT  9     // Out
 #define CV_GATE_OUT   8     // [Unused]
 #define RANDOM_PIN    A5

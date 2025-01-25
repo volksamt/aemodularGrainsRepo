@@ -342,11 +342,26 @@ Oscil<SIN512_NUM_CELLS, AUDIO_RATE> modulator2(SIN512_DATA);
 #endif
 #define carrier2 modulator2			// for convenience
 
-#define CV_POT_IN1    A2    // Note In, Pitch Scaling 
+/// 2-OPERATOR CONFIGURATION WITH SELF-MODULATION SCALING
+///
+/// IN 1            Pitch CV
+/// IN 2            Index of Modulation CV
+/// IN 3            Index of Self Modulation CV
+/// AUDIO IN (A)    Index of Self Modulation Scaling  [Note this is inverted: maximum Audio IN = 0 scaling ("off")]
+/// AUDIO OUT       Out
+/// DIGITAL OUT (D) [Unused]
+///
+/// POT 1           Pitch Scaling        [Set the switch to In1]
+///
+/// POT 2           Index of Modulation Scaling
+///
+/// POT 3           Modulator Relative Pitch	[One of 0.5, 1, 2, 3 ... 15]
+
+#define CV_POT_IN1    A3    // Note In, Pitch Scaling 
 #define CV_POT_IN2    A1    
 #define CV_POT3       A0    
-#define CV_IN3        A3
-#define CV_AUDIO_IN   A4
+#define CV_IN3        A2
+#define CV_AUDIO_IN   A2
 #define CV_AUDIO_OUT  9     // Out
 #define CV_GATE_OUT   8
 #define RANDOM_PIN    A5

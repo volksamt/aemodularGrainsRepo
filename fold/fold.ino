@@ -484,11 +484,27 @@ PROGMEM const float frequencies[1024+512] = {
 Oscil16Bit<SIN2048_NUM_CELLS, AUDIO_RATE> sine(SIN2048_DATA);
 
 
-#define CV_POT_IN1    A2    
-#define CV_POT_IN2    A1    
-#define CV_POT3       A0    
-#define CV_IN3        A3
-#define CV_AUDIO_IN   A4
+/// CONFIGURATION
+///
+/// IN 1            Pitch CV
+/// IN 2            Drive CV
+/// IN 3            [Unused]
+/// AUDIO IN (A)    Tune CV  
+/// AUDIO OUT       Out
+/// DIGITAL OUT (D) [Unused]
+///
+/// POT 1           Pitch CV Scaling        [Set the switch to In1]
+///
+/// POT 2           Drive CV Scaling		[Set the switch to In2]
+///
+/// POT 3           Low Pass Filter Cutoff
+
+
+#define CV_POT_IN1    A3    
+#define CV_POT_IN2    A0    
+#define CV_POT3       A1    
+#define CV_IN3        A6
+#define CV_AUDIO_IN   A2
 #define CV_AUDIO_OUT  9  
 #define CV_GATE_OUT   8
 #define RANDOM_PIN    A5

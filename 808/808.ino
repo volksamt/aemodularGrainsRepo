@@ -201,7 +201,7 @@
 /// you would change below to   #define FORMAT FORMAT_7
 
 //#define FORMAT FORMAT_0
-#define FORMAT FORMAT_5
+#define FORMAT FORMAT_2
 
 
 /// The CONTROL_RATE value below indicates how often per second Mozzi checks for incoming
@@ -439,16 +439,24 @@
 
 /// .... AND WE'RE DONE!
 
-
+//FORMAT_2
+// POT 3                VOLUME
+// POT 2                PITCH 2         [CENTER: Original Pitch]        [Note GRAINS BUG ABOVE]
+// POT 1                PITCH 1         [CENTER: Original Pitch]        [Note GRAINS BUG ABOVE]
+// GATE OUT             TRIGGER 1
+// AUDIO IN             TRIGGER 2
+// IN 3                 UNUSED
+// IN 2                 PITCH CV 2
+// IN 1                 PITCH CV 1 
 
 
 #define CV_POT_IN1    A2 
-#define CV_POT_IN2    A1
+#define CV_POT_IN2    A0
 #define CV_POT3       A0
-#define CV_IN3        A3
-#define CV_AUDIO_IN   A4
+#define CV_IN3        A5
+#define CV_AUDIO_IN   A3
 #define CV_AUDIO_OUT  9
-#define CV_GATE_OUT   8
+#define CV_GATE_OUT   A1
 #define RANDOM_PIN    A5
 
 // Mozzi's setFreq function (which we use for setting sample pitch)
